@@ -135,6 +135,10 @@ class Network {
 			return;
 		}
 
+		if ( ! current_user_can( $this->plugin->admin->view_cap ) ) {
+			return;
+		}
+
 		$href = add_query_arg(
 			array(
 				'page' => $this->plugin->admin->records_page_slug,
